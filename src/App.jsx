@@ -1,24 +1,48 @@
 import "./App.css";
 
-import FlowerCount from "./components/FlowerCount";
-// import FlowersPerClick from "./components/FlowersPerClick";
-import FlowerUpgrades from "./components/FlowerUpgrades";
+import FlowerCountContainer from "./components/FlowerCountContainer";
+import FlowersPerClickContainer from "./components/FlowersPerClickContainer";
+
+import FlowerUpgradesContainer from "./components/FlowerUpgradesContainer";
+
 import flowerData from "./lib/flowerData.json";
+import { useState, useEffect } from "react";
 
 export default function App() {
+  const [flowersPerSecondCount, setFlowerPerSecondCount] = useState(1);
+  const [flowerCount, setFlowerCount] = useState(0);
+
+  function addFlower() {
+    setFlowerCount(flowerCount + 1);
+  }
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setFlowerCount((currentFlowers) => currentFlowers + 1);
+    }, 1000);
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
+
+  function handleClick(upgrade) {
+    if (flowerCount == upgrade.cost || flowerCount > upgrade.cost) {
+      setFlowerPerSecondCount(flowersPerSecondCount + upgrade.increase);
+      setFlowerCount(flowerCount - upgrade.cost);
+    } else {
+      alert("You do not have enough flowers to buy this power!");
+    }
+  }
+
   return (
     <>
       <h1>Flower Power</h1>
-      <FlowerCount />
-      {/* <FlowersPerClick /> */}
 
+      <FlowerCountContainer flowerCount={flowerCount} addFlower={addFlower} />
+      <FlowersPerClickContainer flowersPerSecondCount={flowersPerSecondCount} />
       {flowerData.map((upgrade) => (
         <div key={upgrade.id}>
-          <FlowerUpgrades
-            name={upgrade.powerUpName}
-            FlowersPerClick={upgrade.increase}
-            cost={upgrade.cost}
-          />
+          <FlowerUpgradesContainer upgrade={upgrade} onClick={handleClick} />
         </div>
       ))}
     </>
