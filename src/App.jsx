@@ -1,10 +1,7 @@
 import "./App.css";
-
 import FlowerCountContainer from "./components/FlowerCountContainer";
 import FlowersPerClickContainer from "./components/FlowersPerClickContainer";
-
 import FlowerUpgradesContainer from "./components/FlowerUpgradesContainer";
-
 import flowerData from "./lib/flowerData.json";
 import { useState, useEffect } from "react";
 
@@ -17,13 +14,15 @@ export default function App() {
   }
   useEffect(() => {
     const interval = setInterval(() => {
-      setFlowerCount((currentFlowers) => currentFlowers + 1);
+      setFlowerCount(
+        (currentFlowers) => currentFlowers + flowersPerSecondCount
+      );
     }, 1000);
 
     return () => {
       clearInterval(interval);
     };
-  }, []);
+  }, [flowersPerSecondCount]);
 
   function handleClick(upgrade) {
     if (flowerCount == upgrade.cost || flowerCount > upgrade.cost) {
