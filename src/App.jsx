@@ -34,16 +34,23 @@ export default function App() {
   }
 
   return (
-    <>
-      <h1>Flower Power</h1>
+    <div className="page">
+      <div className="topComponents">
+        <h1 className="Title">Flower Power</h1>
 
-      <FlowerCountContainer flowerCount={flowerCount} addFlower={addFlower} />
-      <FlowersPerClickContainer flowersPerSecondCount={flowersPerSecondCount} />
-      {flowerData.map((upgrade) => (
-        <div key={upgrade.id}>
-          <FlowerUpgradesContainer upgrade={upgrade} onClick={handleClick} />
-        </div>
-      ))}
-    </>
+        <FlowerCountContainer flowerCount={flowerCount} addFlower={addFlower} />
+        <FlowersPerClickContainer
+          flowersPerSecondCount={flowersPerSecondCount}
+        />
+      </div>
+      <div className="bottomComponents">
+        <h1 className="powerTitle">Powers</h1>
+        {flowerData.map((upgrade) => (
+          <div key={upgrade.id}>
+            <FlowerUpgradesContainer upgrade={upgrade} onClick={handleClick} />
+          </div>
+        ))}
+      </div>
+    </div>
   );
 }

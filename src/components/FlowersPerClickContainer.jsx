@@ -1,9 +1,10 @@
 export default function FlowersPerClickContainer(props) {
   return (
-    <>
-      <div>
-        Your flower power is {props.flowersPerSecondCount} flowers per second.
-      </div>
-    </>
+    <div className="flowersPerClickContainer">
+      <p>
+        Your flower power is <span>{props.flowersPerSecondCount}</span> flowers
+        per second.
+      </p>
+    </div>
   );
 }

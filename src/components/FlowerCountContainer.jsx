@@ -1,8 +1,17 @@
+import flower from "/images/flower.png";
+
 export default function FlowerCountContainer(props) {
   return (
-    <>
-      <div>You have {props.flowerCount} flowers.</div>
-      <button onClick={props.addFlower}>Flower</button>
-    </>
+    <div className="flowerCountContainer">
+      <p>
+        You have <span>{props.flowerCount}</span> flowers.
+      </p>
+      <img
+        className="flower"
+        onClick={props.addFlower}
+        src={flower}
+        alt="purple flower"
+      />
+    </div>
   );
 }

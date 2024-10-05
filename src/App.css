@@ -1,0 +1,150 @@
+:root {
+  background-color: #f9db83;
+  display: flex;
+  justify-content: center;
+}
+
+.topComponents {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.Title {
+  font-family: Twelny Regular;
+  color: #195c5e;
+  font-size: 50px;
+  justify-items: center;
+}
+
+.flower {
+  height: 200px;
+}
+
+/* I watched the following video to see how to do this; https://www.youtube.com/shorts/GUjyEJmbwUI */
+.flower:hover {
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🐝</text></svg>")
+      16 0,
+    auto;
+}
+
+.flowerCountContainer p {
+  color: #cc8c45;
+  font-size: 20px;
+  font-family: Waffle Mango Regular;
+}
+
+.flowerCountContainer span {
+  font-size: xx-large;
+  color: #721160;
+}
+
+.flowersPerClickContainer p {
+  color: #cc8c45;
+  font-size: 20px;
+  font-family: Waffle Mango Regular;
+}
+
+.flowersPerClickContainer span {
+  font-size: xx-large;
+  color: #721160;
+}
+
+.powerTitle {
+  font-family: Twelny Regular;
+  color: #195c5e;
+  font-size: 30px;
+  justify-items: center;
+}
+
+.flowerUpgradesContainer {
+  /* border: solid; */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.flowerUpgradesContainer h2 {
+  font-family: Twelny Regular;
+  color: #004d24;
+}
+
+.flowerUpgradesContainer p {
+  font-family: Waffle Mango Regular;
+  padding: 10px;
+}
+
+/* from https://codepen.io/jennyhmc/pen/qBavyVg button number 7 */
+.flowerUpgradesContainer button {
+  background: #2e8b57;
+  font-family: Twelny Regular;
+  color: white;
+  height: 50px;
+  border-radius: 5px;
+  transition: all 300ms;
+}
+
+.flowerUpgradesContainer button:hover {
+  transform: scale(1.1);
+  letter-spacing: 2px;
+  background: white;
+  color: #2e8b57;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.57);
+}
+
+.bottomComponents {
+  border: solid #721160 2px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* these fonts were imported from https://font.download */
+@font-face {
+  font-family: "Twelny Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Twelny Regular"), url("/fonts/Twelny-8OOVA.ttf") format("woff");
+}
+
+@font-face {
+  font-family: "Waffle Mango Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Waffle Mango Regular"),
+    url("/fonts/Waffle Mango.woff") format("woff");
+}
+
+@media (max-width: 380px) {
+  .Title {
+    font-size: 40px;
+  }
+  .flowersPerClickContainer p {
+    font-size: 15px;
+  }
+  .flowerCountContainer p {
+    font-size: 15px;
+  }
+  .flowerUpgradesContainer h2 {
+    font-size: 15px;
+  }
+  .flowerUpgradesContainer p {
+    font-size: 13px;
+  }
+  .flowerUpgradesContainer button {
+    height: 30px;
+  }
+}
+
+@media (min-width: 500px) {
+  .page {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .topComponents {
+    align-items: center;
+    padding-top: 90px;
+  }
+}

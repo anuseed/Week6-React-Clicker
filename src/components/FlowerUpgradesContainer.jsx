@@ -5,11 +5,11 @@ export default function FlowerUpgradesContainer(props) {
   }
 
   return (
-    <>
+    <div className="flowerUpgradesContainer">
       <h2>{props.upgrade.powerUpName}</h2>
-      <p>Flowers Per Click : {props.upgrade.increase}</p>
+      <p>Flowers Per Second: {props.upgrade.increase}</p>
       <p>Cost: {props.upgrade.cost} flowers</p>
       <button onClick={handleUpgrade}>Buy</button>
-    </>
+    </div>
   );
 }

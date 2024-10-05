@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "powerUpName": "Beetle Power",
+    "powerUpName": " Beetle Power",
     "increase": 5,
     "cost": 50
   },
@@ -19,13 +19,13 @@
   },
   {
     "id": 4,
-    "powerUpName": "Butterfly Power",
+    "powerUpName": " Butterfly Power",
     "increase": 100,
     "cost": 1000
   },
   {
     "id": 5,
-    "powerUpName": "Bee Power",
+    "powerUpName": " Bee Power",
     "increase": 300,
     "cost": 2000
   },
@@ -37,7 +37,7 @@
   },
   {
     "id": 7,
-    "powerUpName": "Hoverfly Power",
+    "powerUpName": " Hoverfly Power",
     "increase": 1000,
     "cost": 100000
   }
