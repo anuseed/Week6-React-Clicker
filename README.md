@@ -16,3 +16,7 @@
 - What I had to wrap my head around the most was using props and passing these down to the components.
 - Other aspects where remembering that I could still use the same js syntax above the return!
 - Using images and fonts was also a bit trickier in React but with a lot of googling and reading the error logs I was able to figure it out.
+
+## Planning
+
+I planned the layout of the app on a piece of paper and wrote out the upgrades API. I also used the layout to keep track of classNames labeled on the layout to help with styling.

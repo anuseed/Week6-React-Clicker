@@ -20,7 +20,8 @@
   height: 200px;
 }
 
-/* I watched the following video to see how to do this; https://www.youtube.com/shorts/GUjyEJmbwUI */
+/* I watched the following video to see how change the cursor to a bee on hover; https://www.youtube.com/shorts/GUjyEJmbwUI */
+/* This is the code I used to make the flower shake when the bee lands on it https://css-tricks.com/snippets/css/shake-css-keyframe-animation/ */
 .flower:hover {
   cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🐝</text></svg>")
       16 0,
